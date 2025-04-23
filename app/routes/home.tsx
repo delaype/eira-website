@@ -20,6 +20,7 @@ export default function Home() {
   const [isStudent, setIsStudent] = useState(true);
 
   const handleToggleChange = () => {
+    console.log("Toggle changed");
     setIsStudent(!isStudent);
   };
 
