@@ -30,20 +30,58 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
             text1={isStudent ? STUDENT_COPY.heading : TUTOR_COPY.heading}
             text2={isStudent ? STUDENT_COPY.subheading : TUTOR_COPY.subheading}
           />
-          <img
-            src="assets/play-store.svg"
-            alt="play store"
-            className="max-w-full mt-10 ml-2"
-            style={{ width: "clamp(100px, 30%, 200px)" }}
-          />
+          <a
+            href="https://play.google.com/store/apps/details?id=com.anonymous.eiraapp&pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:cursor-pointer"
+          >
+            <img
+              src="assets/play-store.svg"
+              alt="play store"
+              className="max-w-full mt-10 ml-2 hover:cursor-pointer"
+              style={{ width: "clamp(100px, 40%, 200px)" }}
+            />
+          </a>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center relative">
           <img
             src={isStudent ? "assets/student.svg" : "assets/tutor.svg"}
             alt="eira tutor"
             className="max-w-full"
             style={{ width: "clamp(400px, 80%, 600px)" }}
           />
+          {isStudent ? (
+            <>
+              <img
+                src="assets/student-bubble-1.svg"
+                alt="eira student"
+                className="max-w-full absolute top-10 -left-20"
+                style={{ width: "clamp(100px, 50%, 400px)" }}
+              />
+              <img
+                src="assets/student-bubble-2.svg"
+                alt="eira student"
+                className="max-w-full absolute bottom-10 -right-50"
+                style={{ width: "clamp(100px, 55%, 400px)" }}
+              />
+            </>
+          ) : (
+            <>
+              <img
+                src="assets/tutor-bubble-1.svg"
+                alt="eira tutor"
+                className="max-w-full absolute top-10 -left-20"
+                style={{ width: "clamp(100px, 50%, 400px)" }}
+              />
+              <img
+                src="assets/tutor-bubble-2.svg"
+                alt="eira tutor"
+                className="max-w-full absolute bottom-10 -right-50"
+                style={{ width: "clamp(100px, 55%, 400px)" }}
+              />
+            </>
+          )}
         </div>
       </div>
     </section>

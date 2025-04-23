@@ -50,6 +50,30 @@ export default function PromotionSection({ isStudent }: PromotionSectionProps) {
           transform -translate-x-1/2 -translate-y-1/2
         "
           />
+          <img
+            src="assets/emi-bubble.svg"
+            alt="eira student"
+            className="max-w-full absolute top-10 -left-20"
+            style={{ width: "clamp(100px, 55%, 400px)" }}
+          />
+          <img
+            src="assets/simpl-logo-bubble.svg"
+            alt="Simpl logo"
+            className="max-w-full absolute bottom-10 left-[-100px]"
+            style={{ width: "clamp(100px, 50%, 400px)" }}
+          />
+          <img
+            src="assets/upi-bubble.svg"
+            alt="UPI logo"
+            className="max-w-full absolute bottom-10 right-[-150px]"
+            style={{ width: "clamp(100px, 50%, 400px)" }}
+          />
+          <img
+            src="assets/lazypay-logo-bubble.svg"
+            alt="Lazypay logo"
+            className="max-w-full absolute top-2 right-[-100px]"
+            style={{ width: "clamp(100px, 40%, 400px)" }}
+          />
         </div>
       </div>
 

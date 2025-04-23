@@ -90,7 +90,7 @@ export default function NavBar({ onToggleChange }: NavBarProps) {
               "_blank"
             )
           }
-          className="bg-white text-primary-600 text-base px-4 py-2 rounded-full border border-primary-200"
+          className="bg-white text-primary-600 text-base px-4 py-2 rounded-full border border-primary-200 hover:cursor-pointer"
         >
           <span className="text-primary-600 text-base">Download App</span>
         </button>
