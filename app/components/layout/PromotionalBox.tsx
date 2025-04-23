@@ -17,7 +17,7 @@ export default function PromotionalBox({ isStudent }: PromotionalBoxProps) {
           />
 
           <img
-            src="/app/assets/play-store.svg"
+            src="assets/play-store.svg"
             alt="Get it on Google Play"
             className="w-32 md:w-40 lg:w-48"
           />
@@ -26,11 +26,7 @@ export default function PromotionalBox({ isStudent }: PromotionalBoxProps) {
         {/* Right: person holding phone */}
         <div className="flex justify-center lg:justify-end">
           <img
-            src={
-              isStudent
-                ? "/app/assets/student-2.svg"
-                : "/app/assets/tutor-2.svg"
-            }
+            src={isStudent ? "assets/student-2.svg" : "assets/tutor-2.svg"}
             alt="Person holding a phone showing the app"
             className="w-[clamp(16rem,50vw,34rem)] -mr-14 -mb-8"
           />

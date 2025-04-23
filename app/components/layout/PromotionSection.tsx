@@ -39,8 +39,8 @@ export default function PromotionSection({ isStudent }: PromotionSectionProps) {
           <img
             src={
               isStudent
-                ? "/app/assets/eira-phone-background-student.svg"
-                : "/app/assets/eira-phone-background-tutor.svg"
+                ? "assets/eira-phone-background-student.svg"
+                : "assets/eira-phone-background-tutor.svg"
             }
             alt="App screenshot"
             className="

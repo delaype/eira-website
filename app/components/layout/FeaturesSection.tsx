@@ -9,7 +9,7 @@ export default function FeaturesSection() {
           {/* image box */}
           <div className="w-full h-65 overflow-hidden mb-5">
             <img
-              src="/app/assets/feature-1.svg"
+              src="assets/feature-1.svg"
               alt="Verification Successful"
               className="w-full h-full object-cover object-center"
             />
@@ -26,7 +26,7 @@ export default function FeaturesSection() {
         <article className="bg-white rounded-2xl overflow-hidden  flex flex-col">
           <div className="w-full h-65 overflow-hidden mb-5">
             <img
-              src="/app/assets/feature-2.svg"
+              src="assets/feature-2.svg"
               alt="Create and Share Payment Links"
               className="w-full h-full object-cover object-center"
             />
@@ -42,7 +42,7 @@ export default function FeaturesSection() {
         <article className="bg-white rounded-2xl overflow-hidden flex flex-col">
           <div className="w-full h-65 overflow-hidden mb-5">
             <img
-              src="/app/assets/feature-3.svg"
+              src="assets/feature-3.svg"
               alt="Track Payments"
               className="w-full h-full object-cover object-center"
             />

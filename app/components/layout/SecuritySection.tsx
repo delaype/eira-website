@@ -8,7 +8,7 @@ export default function SecuritySection() {
           {/* Left: security illustration */}
           <div className="flex justify-center lg:justify-start">
             <img
-              src="/app/assets/security.svg"
+              src="assets/security.svg"
               alt="Security shield"
               className="w-[clamp(16rem,65vw,30rem)] h-auto"
             />
@@ -25,12 +25,12 @@ export default function SecuritySection() {
             <p className="text-gray-600 font-medium text-sm">Partnered with:</p>
             <div className="flex items-center space-x-8">
               <img
-                src="/app/assets/yes-bank-logo.svg"
+                src="assets/yes-bank-logo.svg"
                 alt="Yes Bank"
                 className="text-xs object-contain"
               />
               <img
-                src="/app/assets/cashfree-logo.svg"
+                src="assets/cashfree-logo.svg"
                 alt="Cashfree Payments"
                 className="text-xs object-contain"
               />

@@ -31,7 +31,7 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
             text2={isStudent ? STUDENT_COPY.subheading : TUTOR_COPY.subheading}
           />
           <img
-            src="app/assets/play-store.svg"
+            src="assets/play-store.svg"
             alt="play store"
             className="max-w-full mt-10 ml-2"
             style={{ width: "clamp(100px, 30%, 200px)" }}
@@ -39,7 +39,7 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
         </div>
         <div className="flex justify-center">
           <img
-            src={isStudent ? "app/assets/student.svg" : "app/assets/tutor.svg"}
+            src={isStudent ? "assets/student.svg" : "assets/tutor.svg"}
             alt="eira tutor"
             className="max-w-full"
             style={{ width: "clamp(400px, 80%, 600px)" }}

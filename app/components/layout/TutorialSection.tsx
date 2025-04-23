@@ -58,7 +58,7 @@ export default function TutorialSection() {
           >
             {/* Phone #1 */}
             <img
-              src="/app/assets/eira-app-mobile-1.svg"
+              src="assets/eira-app-mobile-1.svg"
               alt="App screen 1"
               className="
             absolute 
@@ -71,7 +71,7 @@ export default function TutorialSection() {
 
             {/* Phone #2 */}
             <img
-              src="/app/assets/eira-app-mobile-2.svg"
+              src="assets/eira-app-mobile-2.svg"
               alt="App screen 2"
               className="
             absolute 

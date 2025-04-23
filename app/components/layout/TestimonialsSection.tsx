@@ -17,25 +17,25 @@ export default function TestimonialsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {[
             {
-              img: "/app/assets/customer-1.png",
+              img: "assets/customer-1.png",
               quote:
                 "Receiving payments instantly at zero cost has empowered me to focus on what I do best—teaching. I love the Eira.club app!",
               author: "Vijay, Bengaluru",
             },
             {
-              img: "/app/assets/customer-2.png",
+              img: "assets/customer-2.png",
               quote:
                 "Receiving payments instantly at zero cost has empowered me to focus on what I do best—teaching. I love the Eira.club app!",
               author: "Priya, Mumbai",
             },
             {
-              img: "/app/assets/customer-3.png",
+              img: "assets/customer-3.png",
               quote:
                 "Receiving payments instantly at zero cost has empowered me to focus on what I do best—teaching. I love the Eira.club app!",
               author: "Vijay, Bengaluru",
             },
             {
-              img: "/app/assets/customer-1.png",
+              img: "assets/customer-1.png",
               quote:
                 "Receiving payments instantly at zero cost has empowered me to focus on what I do best—teaching. I love the Eira.club app!",
               author: "Priya, Mumbai",

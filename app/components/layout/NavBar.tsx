@@ -14,7 +14,7 @@ export default function NavBar({ onToggleChange }: NavBarProps) {
   return (
     <div className="grid grid-cols-3 py-4">
       <div className="">
-        <img src="app/assets/eira-logo.svg" alt="EIRA Logo" className="h-12" />
+        <img src="assets/eira-logo.svg" alt="EIRA Logo" className="h-12" />
       </div>
       <div className="flex justify-center">
         <div className="flex items-center space-x-2">

@@ -26,7 +26,7 @@ export default function FooterSection() {
           {/* Logo + tagline */}
           <div className="space-y-2">
             <img
-              src="/app/assets/eira-logo.svg"
+              src="assets/eira-logo.svg"
               alt="Eira.club logo"
               className="h-12"
             />
@@ -54,24 +54,20 @@ export default function FooterSection() {
           <div className="flex space-x-8 justify-end">
             <a href="https://www.instagram.com/eiraclub" aria-label="Instagram">
               <img
-                src="/app/assets/instagram-icon.svg"
+                src="assets/instagram-icon.svg"
                 alt=""
                 className="h-10 w-10"
               />
             </a>
             <a href="https://www.facebook.com/eiraclub" aria-label="Facebook">
               <img
-                src="/app/assets/facebook-icon.svg"
+                src="assets/facebook-icon.svg"
                 alt=""
                 className="h-10 w-10"
               />
             </a>
             <a href="https://www.youtube.com/@eiraclub" aria-label="YouTube">
-              <img
-                src="/app/assets/youtube-icon.svg"
-                alt=""
-                className="h-10 w-10"
-              />
+              <img src="assets/youtube-icon.svg" alt="" className="h-10 w-10" />
             </a>
           </div>
         </div>
