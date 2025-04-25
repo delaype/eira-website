@@ -1,13 +1,19 @@
 import { useState } from "react";
 
 interface NavBarProps {
-  onToggleChange: () => void;
+  isToggleVisible: boolean;
+  onToggleChange?: () => void;
 }
-export default function NavBar({ onToggleChange }: NavBarProps) {
+export default function NavBar({
+  isToggleVisible,
+  onToggleChange,
+}: NavBarProps) {
   const [isStudent, setIsStudent] = useState(true);
 
   const handleToggle = () => {
-    onToggleChange();
+    if (isToggleVisible) {
+      onToggleChange?.();
+    }
     setIsStudent(!isStudent);
   };
 
@@ -16,11 +22,13 @@ export default function NavBar({ onToggleChange }: NavBarProps) {
       <div className="">
         <img src="assets/eira-logo.svg" alt="EIRA Logo" className="h-12" />
       </div>
+
       <div className="flex justify-center">
-        <div className="flex items-center space-x-2">
-          {/* Tutor label */}
-          <span
-            className={`
+        {isToggleVisible && (
+          <div className="flex items-center space-x-2">
+            {/* Tutor label */}
+            <span
+              className={`
             text-sm
             ${
               isStudent
@@ -28,22 +36,22 @@ export default function NavBar({ onToggleChange }: NavBarProps) {
                 : "text-blue-600 font-medium"
             }
           `}
-          >
-            Tutor
-          </span>
+            >
+              Tutor
+            </span>
 
-          {/* Toggle pill */}
-          <div
-            onClick={handleToggle}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                setIsStudent(!isStudent);
-              }
-            }}
-            role="switch"
-            aria-checked={isStudent}
-            tabIndex={0}
-            className={`
+            {/* Toggle pill */}
+            <div
+              onClick={handleToggle}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  setIsStudent(!isStudent);
+                }
+              }}
+              role="switch"
+              aria-checked={isStudent}
+              tabIndex={0}
+              className={`
             relative 
             w-10 h-5 
             rounded-full 
@@ -51,10 +59,10 @@ export default function NavBar({ onToggleChange }: NavBarProps) {
             transition-colors
             ${isStudent ? "bg-blue-600" : "bg-blue-200"}
           `}
-          >
-            {/* Thumb */}
-            <div
-              className={`
+            >
+              {/* Thumb */}
+              <div
+                className={`
               absolute 
               top-0.5 
               left-0.5 
@@ -64,12 +72,12 @@ export default function NavBar({ onToggleChange }: NavBarProps) {
               transition-transform
               ${isStudent ? "translate-x-5" : "translate-x-0"}
             `}
-            />
-          </div>
+              />
+            </div>
 
-          {/* Student label */}
-          <span
-            className={`
+            {/* Student label */}
+            <span
+              className={`
             text-sm
             ${
               isStudent
@@ -77,10 +85,11 @@ export default function NavBar({ onToggleChange }: NavBarProps) {
                 : "text-gray-500 font-normal"
             }
           `}
-          >
-            Student
-          </span>
-        </div>
+            >
+              Student
+            </span>
+          </div>
+        )}
       </div>
       <div className="flex justify-end">
         <button

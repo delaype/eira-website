@@ -31,7 +31,7 @@ export default function Home() {
         margin: "0 auto",
       }}
     >
-      <NavBar onToggleChange={handleToggleChange} />
+      <NavBar isToggleVisible={true} onToggleChange={handleToggleChange} />
       <HeroSection isStudent={isStudent} />
       <PromotionSection isStudent={isStudent} />
       <FeaturesSection />
