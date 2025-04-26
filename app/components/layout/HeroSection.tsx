@@ -56,13 +56,13 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
               <img
                 src="assets/student-bubble-1.svg"
                 alt="eira student"
-                className="max-w-full absolute top-10 -left-20"
+                className="max-w-full absolute top-24 -left-20"
                 style={{ width: "clamp(100px, 50%, 400px)" }}
               />
               <img
                 src="assets/student-bubble-2.svg"
                 alt="eira student"
-                className="max-w-full absolute bottom-10 -right-50"
+                className="max-w-full absolute bottom-0 right-0"
                 style={{ width: "clamp(100px, 55%, 400px)" }}
               />
             </>
@@ -71,13 +71,13 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
               <img
                 src="assets/tutor-bubble-1.svg"
                 alt="eira tutor"
-                className="max-w-full absolute top-10 -left-20"
+                className="max-w-full absolute top-24 -left-20"
                 style={{ width: "clamp(100px, 50%, 400px)" }}
               />
               <img
                 src="assets/tutor-bubble-2.svg"
                 alt="eira tutor"
-                className="max-w-full absolute bottom-10 -right-50"
+                className="max-w-full absolute bottom-0 right-0"
                 style={{ width: "clamp(100px, 55%, 400px)" }}
               />
             </>

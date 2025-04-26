@@ -6,7 +6,7 @@ interface PromotionSectionProps {
 
 export default function PromotionSection({ isStudent }: PromotionSectionProps) {
   return (
-    <section className="grid grid-cols-3 md:grid-cols-3 gap-4 py-24 mt-10">
+    <section className="grid grid-cols-3 md:grid-cols-3 gap-2 py-24 mt-10">
       {/* Define constants for copy text based on user type */}
       {/* 1) Heading */}
       <div className="md:col-start-1 md:row-start-1">
@@ -28,12 +28,11 @@ export default function PromotionSection({ isStudent }: PromotionSectionProps) {
         <div
           className="
         relative 
-        w-[clamp(16rem,50vw,24rem)] 
-        h-[clamp(16rem,50vw,24rem)] 
+        w-[clamp(16rem,70vw,50rem)] 
+        h-[clamp(16rem,70vw,40rem)] 
       "
         >
           {/* outer ring */}
-          <div className="absolute -inset-[50%] border-2 border-blue-100 opacity-30 rounded-full bg-blue-100" />
 
           {/* phone screenshot */}
           <img
@@ -46,33 +45,9 @@ export default function PromotionSection({ isStudent }: PromotionSectionProps) {
             className="
           absolute 
           top-1/2 left-1/2 
-          w-[clamp(10rem,100%,50rem)] 
+         
           transform -translate-x-1/2 -translate-y-1/2
         "
-          />
-          <img
-            src="assets/emi-bubble.svg"
-            alt="eira student"
-            className="max-w-full absolute top-10 -left-20"
-            style={{ width: "clamp(100px, 55%, 400px)" }}
-          />
-          <img
-            src="assets/simpl-logo-bubble.svg"
-            alt="Simpl logo"
-            className="max-w-full absolute bottom-10 left-[-100px]"
-            style={{ width: "clamp(100px, 50%, 400px)" }}
-          />
-          <img
-            src="assets/upi-bubble.svg"
-            alt="UPI logo"
-            className="max-w-full absolute bottom-10 right-[-150px]"
-            style={{ width: "clamp(100px, 50%, 400px)" }}
-          />
-          <img
-            src="assets/lazypay-logo-bubble.svg"
-            alt="Lazypay logo"
-            className="max-w-full absolute top-2 right-[-100px]"
-            style={{ width: "clamp(100px, 40%, 400px)" }}
           />
         </div>
       </div>
