@@ -46,7 +46,13 @@ export default function TestimonialsSection() {
               className="relative rounded-2xl overflow-hidden shadow-lg"
             >
               {/* fixed-height image container */}
-              <div className="w-full h-85">
+              <div
+                className="
+    w-full
+    h-[clamp(14rem,90vw,26rem)]  /* phones: shorter container  */
+    sm:h-85                      /* ≥ 640 px: restore original */
+  "
+              >
                 <img
                   src={img}
                   alt={`Testimonial by ${author}`}

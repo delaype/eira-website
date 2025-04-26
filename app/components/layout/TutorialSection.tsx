@@ -61,12 +61,11 @@ export default function TutorialSection() {
               src="assets/eira-app-mobile-1.svg"
               alt="App screen 1"
               className="
-            absolute 
-            top-1/4 
-            left-1/5
-            w-[clamp(12rem,50%,20rem)] 
-            transform -rotate-6
-          "
+    absolute top-1/4 left-1/5
+    w-[clamp(10rem,40%,16rem)]     /* ↓ phones & small tablets */
+    sm:w-[clamp(12rem,50%,20rem)]  /* ≥ 640 px  restore original range */
+    -rotate-6
+  "
             />
 
             {/* Phone #2 */}
@@ -74,12 +73,11 @@ export default function TutorialSection() {
               src="assets/eira-app-mobile-2.svg"
               alt="App screen 2"
               className="
-            absolute 
-            bottom-1/4
-            right-1
-            w-[clamp(12rem,45%,20rem)] 
-            transform rotate-6
-          "
+    absolute bottom-1/4 right-1
+    w-[clamp(10rem,35%,16rem)]     /* ↓ phones & small tablets */
+    sm:w-[clamp(12rem,45%,20rem)]  /* ≥ 640 px  restore original range */
+    rotate-6
+  "
             />
           </div>
         </div>

@@ -6,9 +6,14 @@ interface PromotionSectionProps {
 
 export default function PromotionSection({ isStudent }: PromotionSectionProps) {
   return (
-    <section className="grid grid-cols-3 md:grid-cols-3 gap-2 py-24 mt-10">
-      {/* Define constants for copy text based on user type */}
-      {/* 1) Heading */}
+    <section
+      className="
+    grid grid-cols-1 md:grid-cols-3      /* ⇢ 1-col stack on mobile, 3-col on ≥ md */
+    gap-y-12 md:gap-x-2                  /* vertical breathing room on mobile     */
+    py-24 mt-10
+  "
+    >
+      {/* ───────────────────  1) Heading / intro copy  ─────────────────── */}
       <div className="md:col-start-1 md:row-start-1">
         {isStudent ? (
           <TypographyTypeII
@@ -23,18 +28,19 @@ export default function PromotionSection({ isStudent }: PromotionSectionProps) {
         )}
       </div>
 
-      {/* 2) Circle + phone */}
-      <div className="md:col-start-2 md:row-start-2 justify-self-center">
+      {/* ───────────────────  2) Phone + backdrop circle  ─────────────────── */}
+      <div className="justify-self-center md:col-start-2 md:row-start-2">
         <div
           className="
-        relative 
-        w-[clamp(16rem,70vw,50rem)] 
-        h-[clamp(16rem,70vw,40rem)] 
-      "
+    relative
+    w-[clamp(20rem,100vw,60rem)]   /* phones → bigger (min 20 rem)  */
+    h-[clamp(20rem,100vw,60rem)]
+    sm:w-[clamp(16rem,70vw,50rem)] /* ≥ 640 px reverts to old values */
+    sm:h-[clamp(16rem,70vw,40rem)]
+  "
         >
-          {/* outer ring */}
+          {/* ⬤  outer ring lives in your SVG / BG  */}
 
-          {/* phone screenshot */}
           <img
             src={
               isStudent
@@ -43,17 +49,15 @@ export default function PromotionSection({ isStudent }: PromotionSectionProps) {
             }
             alt="App screenshot"
             className="
-          absolute 
-          top-1/2 left-1/2 
-         
-          transform -translate-x-1/2 -translate-y-1/2
-        "
+      absolute top-1/2 left-1/2
+      -translate-x-1/2 -translate-y-1/2
+    "
           />
         </div>
       </div>
 
-      {/* 3) Sub-title */}
-      <div className="md:col-start-3 md:row-start-3 place-self-end text-right">
+      {/* ───────────────────  3) Sub-title / secondary copy  ─────────────────── */}
+      <div className="md:col-start-3 md:row-start-3 md:place-self-end md:text-right">
         {isStudent ? (
           <TypographyTypeII
             text1="Credit card to bank account at 1%"

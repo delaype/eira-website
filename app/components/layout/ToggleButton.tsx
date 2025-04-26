@@ -1,31 +1,26 @@
 import { useState } from "react";
 
-interface NavBarProps {
+interface ToggleButtonProps {
   isToggleVisible: boolean;
-  onToggleChange?: () => void;
+  onToggleChange: () => void;
 }
-export default function NavBar({
+
+export default function ToggleButton({
   isToggleVisible,
   onToggleChange,
-}: NavBarProps) {
-  const [isStudent, setIsStudent] = useState(true);
+}: ToggleButtonProps) {
+  const [isStudent, setIsStudent] = useState(false);
 
   const handleToggle = () => {
-    if (isToggleVisible) {
-      onToggleChange?.();
-    }
     setIsStudent(!isStudent);
+    onToggleChange();
   };
 
   return (
-    <div className="grid grid-cols-3 py-4">
-      <div className="">
-        <img src="assets/eira-logo.svg" alt="EIRA Logo" className="h-12" />
-      </div>
-
+    <section className="flex md:hidden sm:hidden xs:flex flex-col items-center justify-center pb-20">
       <div className="flex justify-center">
         {isToggleVisible && (
-          <div className="hidden sm:flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
             {/* Tutor label */}
             <span
               className={`
@@ -91,21 +86,6 @@ export default function NavBar({
           </div>
         )}
       </div>
-      <div className="flex justify-end">
-        <button
-          onClick={() =>
-            window.open(
-              "https://play.google.com/store/apps/details?id=com.anonymous.eiraapp&pli=1",
-              "_blank"
-            )
-          }
-          className="bg-white text-primary-600 text-base px-4 py-2 rounded-full border border-primary-200 hover:cursor-pointer"
-        >
-          <span className="text-primary-600 text-xs md:text-base">
-            Download App
-          </span>
-        </button>
-      </div>
-    </div>
+    </section>
   );
 }

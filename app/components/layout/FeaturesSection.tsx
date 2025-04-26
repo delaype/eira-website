@@ -7,7 +7,14 @@ export default function FeaturesSection() {
         {/* Card 1 */}
         <article className="bg-white rounded-2xl overflow-hidden  flex flex-col">
           {/* image box */}
-          <div className="w-full h-65 overflow-hidden mb-5">
+          <div
+            className="
+    w-full
+    h-[clamp(180px,65vw,260px)]  /* phones: shorter; width unchanged      */
+    sm:h-65                      /* ≥ 640 px: keep the original height    */
+    overflow-hidden mb-5
+  "
+          >
             <img
               src="assets/feature-1.svg"
               alt="Verification Successful"
@@ -24,7 +31,14 @@ export default function FeaturesSection() {
 
         {/* Card 2 */}
         <article className="bg-white rounded-2xl overflow-hidden  flex flex-col">
-          <div className="w-full h-65 overflow-hidden mb-5">
+          <div
+            className="
+    w-full
+    h-[clamp(180px,60vw,260px)]  /* phones: shorter; width unchanged      */
+    sm:h-65                      /* ≥ 640 px: keep the original height    */
+    overflow-hidden mb-5
+  "
+          >
             <img
               src="assets/feature-2.svg"
               alt="Create and Share Payment Links"
@@ -40,7 +54,14 @@ export default function FeaturesSection() {
 
         {/* Card 3 */}
         <article className="bg-white rounded-2xl overflow-hidden flex flex-col">
-          <div className="w-full h-65 overflow-hidden mb-5">
+          <div
+            className="
+    w-full
+    h-[clamp(180px,60vw,260px)]  /* phones: shorter; width unchanged      */
+    sm:h-65                      /* ≥ 640 px: keep the original height    */
+    overflow-hidden mb-5
+  "
+          >
             <img
               src="assets/feature-3.svg"
               alt="Track Payments"

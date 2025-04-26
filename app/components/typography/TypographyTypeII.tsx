@@ -11,8 +11,15 @@ export const TypographyTypeII: React.FC<TypographyTypeIIProps> = ({
 }) => {
   return (
     <div className="space-y-2">
-      {text1 && <p className="text-4xl text-neutral-900 m-2">{text1}</p>}
-      {text2 && <p className="text-sm text-black-40 m-2">{text2}</p>}
+      {/* headline */}
+      {text1 && (
+        <p className="text-[29px] sm:text-4xl text-neutral-900 m-2">{text1}</p>
+      )}
+
+      {/* subtitle / caption */}
+      {text2 && (
+        <p className="text-[16px] sm:text-sm text-black-40 m-2">{text2}</p>
+      )}
     </div>
   );
 };

@@ -9,6 +9,7 @@ import TestimonialsSection from "~/components/layout/TestimonialsSection";
 import PromotionalBox from "~/components/layout/PromotionalBox";
 import FooterSection from "~/components/layout/FooterSection";
 import { useState } from "react";
+import ToggleButton from "~/components/layout/ToggleButton";
 export const meta: MetaFunction = () => {
   return [
     { title: "EIRA - Home" },
@@ -30,8 +31,13 @@ export default function Home() {
         width: "clamp(600px, 90%, 1400px)",
         margin: "0 auto",
       }}
+      className="px-8 sm:px-0"
     >
       <NavBar isToggleVisible={true} onToggleChange={handleToggleChange} />
+      <ToggleButton
+        isToggleVisible={true}
+        onToggleChange={handleToggleChange}
+      />
       <HeroSection isStudent={isStudent} />
       <PromotionSection isStudent={isStudent} />
       <FeaturesSection />

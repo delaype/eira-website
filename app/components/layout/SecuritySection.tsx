@@ -10,7 +10,11 @@ export default function SecuritySection() {
             <img
               src="assets/security.svg"
               alt="Security shield"
-              className="w-[clamp(16rem,65vw,30rem)] h-auto"
+              className="
+      w-[clamp(20rem,95vw,40rem)]   /* mobile-first: bigger (min 20 rem, up to 80 vw) */
+      sm:w-[clamp(16rem,65vw,30rem)]/* ≥ 640 px: revert to original curve            */
+      h-auto
+    "
             />
           </div>
 
