@@ -27,11 +27,15 @@ export default function Home() {
 
   return (
     <div
-      style={{
-        width: "clamp(600px, 90%, 1400px)",
-        margin: "0 auto",
-      }}
-      className="px-8 sm:px-0"
+      className="
+    w-full    
+    overflow-x-hidden             /* ↓ < 640 px: 100 % width – no overflow      */
+    sm:w-[90%]             /* ≥ 640 px: 90 % of the viewport            */
+    max-w-[1400px]         /* hard ceiling on very wide desktops        */
+    mx-auto                /* center the block                          */
+    px-4                   /* a little side padding on mobile           */
+    sm:px-0                /* remove that padding on ≥ 640 px           */
+  "
     >
       <NavBar isToggleVisible={true} onToggleChange={handleToggleChange} />
       <ToggleButton

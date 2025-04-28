@@ -1,6 +1,6 @@
 export default function FooterSection() {
   return (
-    <footer className="relative overflow-hidden bg-white py-16 pt-16 pb-[20rem]">
+    <footer className="relative overflow-hidden bg-white py-16 pt-16 pb-[10rem] sm:pb-[20rem]">
       {/* Background giant text */}
       <span
         className="
@@ -8,7 +8,7 @@ export default function FooterSection() {
       bottom-4
       left-1/2
       transform -translate-x-1/2
-      text-[8rem] md:text-[12rem] lg:text-[16rem]
+      text-[5rem] md:text-[12rem] lg:text-[16rem]
       font-semibold
       text-gray-200
       leading-none

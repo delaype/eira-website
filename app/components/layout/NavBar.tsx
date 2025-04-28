@@ -20,7 +20,11 @@ export default function NavBar({
   return (
     <div className="grid grid-cols-3 py-4">
       <div className="">
-        <img src="assets/eira-logo.svg" alt="EIRA Logo" className="h-12" />
+        <img
+          src="assets/eira-logo.svg"
+          alt="EIRA Logo"
+          className="h-8 md:h-12"
+        />
       </div>
 
       <div className="flex justify-center">
@@ -99,9 +103,9 @@ export default function NavBar({
               "_blank"
             )
           }
-          className="bg-white text-primary-600 text-base px-4 py-2 rounded-full border border-primary-200 hover:cursor-pointer"
+          className="bg-white text-primary-600 text-base px-2 py-1 sm:px-4 sm:py-2 rounded-full border border-primary-200 hover:cursor-pointer"
         >
-          <span className="text-primary-600 text-xs md:text-base">
+          <span className="text-primary-600 text-[12px] md:text-base">
             Download App
           </span>
         </button>
