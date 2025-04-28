@@ -26,21 +26,23 @@ export default function SecuritySection() {
               text5="With partnerships with top banks and RBI-regulated payment aggregators, every transaction is safeguarded. Enjoy peace of mind knowing your financial information is fully protected."
             />
 
-            <p className="text-gray-600 font-medium text-sm">Partnered with:</p>
+            <p className="text-gray-600 font-medium text-[14px] sm:text-sm">
+              Partnered with:
+            </p>
             <div className="flex items-center space-x-8">
               <img
                 src="assets/yes-bank-logo.svg"
                 alt="Yes Bank"
-                className="text-xs object-contain"
+                className="w-full sm:w-auto object-contain"
               />
               <img
                 src="assets/cashfree-logo.svg"
                 alt="Cashfree Payments"
-                className="text-xs object-contain"
+                className="w-full sm:w-auto object-contain"
               />
             </div>
 
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-[14px] sm:text-xs">
               **Cashfree is a RBI regulated payment aggregator
             </p>
           </div>

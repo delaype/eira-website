@@ -24,7 +24,9 @@ export const TypographyTypeI: React.FC<TypographyTypeIProps> = ({
 
       {/* hero / headline */}
       {text2 && (
-        <p className="text-[29px] sm:text-4xl text-primary-900 m-2">{text2}</p>
+        <p className="text-[29px] leading-tight sm:text-4xl sm:leading-2 text-primary-900 m-2">
+          {text2}
+        </p>
       )}
 
       {/* sub-heading */}
