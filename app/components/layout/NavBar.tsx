@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import { useState } from "react";
 
 interface NavBarProps {
@@ -20,11 +21,13 @@ export default function NavBar({
   return (
     <div className="grid grid-cols-3 py-4">
       <div className="">
-        <img
-          src="assets/eira-logo.svg"
-          alt="EIRA Logo"
-          className="h-8 md:h-12"
-        />
+        <Link to="/">
+          <img
+            src="assets/eira-logo.svg"
+            alt="EIRA Logo"
+            className="h-8 md:h-12 cursor-pointer"
+          />
+        </Link>
       </div>
 
       <div className="flex justify-center">
@@ -95,20 +98,17 @@ export default function NavBar({
           </div>
         )}
       </div>
-      <div className="flex justify-end">
-        <button
-          onClick={() =>
-            window.open(
-              "https://play.google.com/store/apps/details?id=com.anonymous.eiraapp&pli=1",
-              "_blank"
-            )
-          }
-          className="bg-white text-primary-600 text-base px-2 py-1 sm:px-4 sm:py-2 rounded-full border border-primary-200 hover:cursor-pointer"
+      <div className="flex justify-end cursor-pointer">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.anonymous.eiraapp&pli=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white text-primary-600 text-base px-2 py-1 sm:px-4 sm:py-2 rounded-full border border-primary-200 cursor-pointer transition hover:shadow-md"
         >
           <span className="text-primary-600 text-[12px] md:text-base">
             Download App
           </span>
-        </button>
+        </a>
       </div>
     </div>
   );

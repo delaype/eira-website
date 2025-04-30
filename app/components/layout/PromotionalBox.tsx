@@ -16,11 +16,18 @@ export default function PromotionalBox({ isStudent }: PromotionalBoxProps) {
             text5="Join the Eira.club community today—where education fees are paid easily, and payments are received instantly."
           />
 
-          <img
-            src="assets/play-store.svg"
-            alt="Get it on Google Play"
-            className="w-32 md:w-40 lg:w-48"
-          />
+          <a
+            href="https://play.google.com/store/apps/details?id=com.anonymous.eiraapp&pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:cursor-pointer hover:scale-105 transition-all duration-300 hover:shadow-md hover:shadow-primary-200 hover:bg-primary-50"
+          >
+            <img
+              src="assets/play-store.svg"
+              alt="Get it on Google Play"
+              className="w-32 md:w-40 lg:w-48 my-10"
+            />
+          </a>
         </div>
 
         {/* Right: person holding phone */}

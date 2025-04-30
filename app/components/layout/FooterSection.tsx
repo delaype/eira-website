@@ -1,3 +1,5 @@
+import { Link } from "@remix-run/react";
+
 export default function FooterSection() {
   return (
     <footer className="relative overflow-hidden bg-white py-16 pt-16 pb-[10rem] sm:pb-[20rem]">
@@ -25,11 +27,13 @@ export default function FooterSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {/* Logo + tagline */}
           <div className="space-y-2">
-            <img
-              src="assets/eira-logo.svg"
-              alt="Eira.club logo"
-              className="h-12"
-            />
+            <Link to="/">
+              <img
+                src="assets/eira-logo.svg"
+                alt="Eira.club logo"
+                className="h-12 cursor-pointer"
+              />
+            </Link>
             <p className="text-neutral-300 text-xs">
               Pay Education Fees &amp; Receive Payments Instantly
             </p>
@@ -37,17 +41,23 @@ export default function FooterSection() {
 
           {/* Navigation links */}
           <div className="flex flex-col space-y-2">
-            {["Website", "Contact", "Privacy Policy", "Terms of use"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={"https://eira.club"}
-                  className="text-neutral-300 text-xs hover:text-blue-600 transition"
-                >
-                  {item}
-                </a>
-              )
-            )}
+            {[
+              { name: "Website", route: "/" },
+              { name: "Contact", route: "/contact" },
+              {
+                name: "Privacy Policy",
+                route: "/privacy-policy",
+              },
+              { name: "Terms of use", route: "/terms-of-use" },
+            ].map((item) => (
+              <Link
+                key={item.name}
+                to={item.route}
+                className="text-neutral-300 text-xs hover:text-blue-600 transition"
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
           {/* Social icons */}

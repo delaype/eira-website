@@ -1,7 +1,7 @@
 import NavBar from "~/components/layout/NavBar";
 import FooterSection from "~/components/layout/FooterSection";
 
-export default function TypographyDemo() {
+export default function PrivacyPolicy() {
   return (
     <div
       style={{
