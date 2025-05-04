@@ -62,22 +62,29 @@ export default function FooterSection() {
 
           {/* Social icons */}
           <div className="flex space-x-8 justify-end">
-            <a href="https://www.instagram.com/eiraclub" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/eira.club/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
               <img
                 src="assets/instagram-icon.svg"
                 alt=""
                 className="h-10 w-10"
               />
             </a>
-            <a href="https://www.facebook.com/eiraclub" aria-label="Facebook">
+            <a
+              href="https://www.facebook.com/eiraclub"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
               <img
                 src="assets/facebook-icon.svg"
                 alt=""
                 className="h-10 w-10"
               />
-            </a>
-            <a href="https://www.youtube.com/@eiraclub" aria-label="YouTube">
-              <img src="assets/youtube-icon.svg" alt="" className="h-10 w-10" />
             </a>
           </div>
         </div>

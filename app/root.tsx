@@ -29,8 +29,24 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="google-site-verification"
+          content="4l44yx1CPog4Drs0Kz1vPKwBl11JD5RItjBgzg1Euws"
+        />
         <Meta />
         <Links />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-KH1ZGQ8W8E"
+        ></script>
+        <script>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-KH1ZGQ8W8E');
+        `}
+        </script>
       </head>
       <body className="font-sans text-base text-neutral-900 bg-white">
         <Outlet />
