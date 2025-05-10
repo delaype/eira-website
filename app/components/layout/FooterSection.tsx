@@ -37,13 +37,39 @@ export default function FooterSection() {
             <p className="text-neutral-300 text-xs">
               Pay Education Fees &amp; Receive Payments Instantly
             </p>
+            <div className="space-y-1">
+              <h3 className="text-xs font-medium text-neutral-400">
+                Contact Us
+              </h3>
+              <p className="text-neutral-300 text-[12px]">
+                Email:{" "}
+                <a
+                  href="mailto:support@eira.club"
+                  className="hover:text-blue-600 transition"
+                >
+                  support@eira.club
+                </a>
+              </p>
+              <p className="text-neutral-300 text-[12px]">
+                Phone:{" "}
+                <a
+                  href="tel:+919873189338"
+                  className="hover:text-blue-600 transition"
+                >
+                  +91 9873189338
+                </a>
+              </p>
+              <p className="text-neutral-300 text-[12px]">
+                29, RR Road, Block C, Mishal Garhi, Govindpuram, Ghaziabad,
+                Uttar Pradesh 201001
+              </p>
+            </div>
           </div>
 
           {/* Navigation links */}
           <div className="flex flex-col space-y-2">
             {[
               { name: "Website", route: "/" },
-              { name: "Contact", route: "/contact" },
               {
                 name: "Privacy Policy",
                 route: "/privacy-policy",

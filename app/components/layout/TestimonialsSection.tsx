@@ -20,25 +20,25 @@ export default function TestimonialsSection() {
               img: "assets/customer-1.png",
               quote:
                 "Receiving payments instantly at zero cost has empowered me to focus on what I do best—teaching. I love the Eira.club app!",
-              author: "Vijay, Bengaluru",
+              author: "Priya, Bengaluru",
             },
             {
               img: "assets/customer-2.png",
               quote:
-                "Receiving payments instantly at zero cost has empowered me to focus on what I do best—teaching. I love the Eira.club app!",
-              author: "Priya, Mumbai",
+                "My students love the credit-card option, and I love that Eira handles everything automatically. I can finally ditch those awkward payment reminders!",
+              author: "Vijay, Mumbai",
             },
             {
               img: "assets/customer-3.png",
               quote:
-                "Receiving payments instantly at zero cost has empowered me to focus on what I do best—teaching. I love the Eira.club app!",
-              author: "Vijay, Bengaluru",
+                "Eira’s low cost transfers mean I keep every rupee I earn. That adds up fast over time.",
+              author: "Ashish, Delhi",
             },
             {
               img: "assets/customer-1.png",
               quote:
                 "Receiving payments instantly at zero cost has empowered me to focus on what I do best—teaching. I love the Eira.club app!",
-              author: "Priya, Mumbai",
+              author: "Priya, Bengaluru",
             },
           ].map(({ img, quote, author }, i) => (
             <div
