@@ -19,7 +19,7 @@ export default function NavBar({
   };
 
   return (
-    <div className="grid grid-cols-3 py-4">
+    <div className="grid grid-cols-3 pb-10 pt-4">
       <div className="">
         <Link to="/">
           <img
@@ -103,7 +103,7 @@ export default function NavBar({
           href="https://play.google.com/store/apps/details?id=com.anonymous.eiraapp&pli=1"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white text-primary-600 text-base px-2 py-1 sm:px-4 sm:py-2 rounded-full border border-primary-200 cursor-pointer transition hover:shadow-md"
+          className="bg-white text-primary-600 text-base px-2 sm:px-4 sm:py-2 rounded-full border border-primary-200 cursor-pointer transition hover:shadow-md"
         >
           <span className="text-primary-600 text-[12px] md:text-base">
             Download App

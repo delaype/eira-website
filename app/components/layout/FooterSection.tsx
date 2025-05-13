@@ -101,7 +101,7 @@ export default function FooterSection() {
               />
             </a>
             <a
-              href="https://www.facebook.com/eiraclub"
+              href="https://www.facebook.com/people/Eiraclub/61568530134968/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
