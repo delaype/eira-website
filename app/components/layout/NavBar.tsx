@@ -98,17 +98,21 @@ export default function NavBar({
           </div>
         )}
       </div>
-      <div className="flex justify-end cursor-pointer">
-        <a
-          href="https://play.google.com/store/apps/details?id=com.anonymous.eiraapp&pli=1"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white text-primary-600 text-base px-2 sm:px-4 sm:py-2 rounded-full border border-primary-200 cursor-pointer transition hover:shadow-md"
+      <div className="flex justify-end">
+        <button
+          onClick={() =>
+            window.open(
+              "https://play.google.com/store/apps/details?id=com.anonymous.eiraapp&pli=1",
+              "_blank",
+              "noopener,noreferrer"
+            )
+          }
+          className="bg-white text-primary-600 text-base px-2 sm:px-4 py-2 rounded-full border border-primary-200 hover:shadow-md transition-all duration-200 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-200 focus:ring-opacity-50 z-50 whitespace-normal text-center min-w-[80px] sm:min-w-[120px]"
         >
-          <span className="text-primary-600 text-[12px] md:text-base">
+          <span className="text-primary-600 text-[12px] sm:text-base">
             Download App
           </span>
-        </a>
+        </button>
       </div>
     </div>
   );
