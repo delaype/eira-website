@@ -23,152 +23,274 @@ export default function TermsOfUse() {
 
         {/* ───── Terms Body ───── */}
         <section className="space-y-8">
-          {/* 1 */}
-          <div className="text-base font-medium text-neutral-800">
-            1&nbsp;·&nbsp;Acceptance&nbsp;of&nbsp;Terms
+          {/* Teacher <> Platform Section */}
+          <div className="text-4xl font-semibold text-neutral-900 text-center mb-8">
+            Teacher &lt;&gt; Platform
           </div>
           <p className="text-base leading-relaxed text-neutral-700">
-            By using Mateira Technologies Private Limited (
-            <strong>“Mateira”</strong>) services, you confirm that you are at
-            least 18&nbsp;years old or are using the platform under the
-            supervision of a parent or legal guardian. You agree to comply with
-            all applicable laws, regulations and these Terms.
+            This Agreement (&quot;Agreement&quot;) is made and entered into by
+            and between Matiera Technologies Private Limited, a company
+            incorporated under the laws of India with its registered office at
+            29 RR Road Ghaziabad 201001 (&quot;Company&quot;), and the
+            undersigned service provider (&quot;Provider&quot;).
           </p>
 
-          {/* 2 */}
-          <div className="text-base font-medium text-neutral-800">
-            2&nbsp;·&nbsp;User&nbsp;Accounts
+          {/* Terms Applicable to All Providers */}
+          <div className="text-lg font-semibold text-neutral-900">
+            TERMS APPLICABLE TO ALL PROVIDERS
           </div>
-          <p className="text-base leading-relaxed text-neutral-700">
-            Certain features require registration with a valid email address.
-            You are responsible for safeguarding account credentials and all
-            activities under your account. Notify Mateira immediately of any
-            unauthorised access or use.
-          </p>
 
-          {/* 3 */}
+          {/* Eligibility and Representation */}
           <div className="text-base font-medium text-neutral-800">
-            3&nbsp;·&nbsp;Access&nbsp;&&nbsp;Use&nbsp;of&nbsp;Services
-          </div>
-          <p className="text-base leading-relaxed text-neutral-700">
-            You agree to use Mateira services only for lawful purposes and in
-            accordance with these Terms. Mateira may suspend or terminate access
-            for violations or misuse.
-          </p>
-
-          {/* 4 */}
-          <div className="text-base font-medium text-neutral-800">
-            4&nbsp;·&nbsp;Intellectual&nbsp;Property
-          </div>
-          <p className="text-base leading-relaxed text-neutral-700">
-            All content—including text, graphics, software and code—is the
-            property of Mateira or its licensors and protected by
-            intellectual-property laws. Reproduction or distribution without
-            written consent is prohibited.
-          </p>
-
-          {/* 5 */}
-          <div className="text-base font-medium text-neutral-800">
-            5&nbsp;·&nbsp;Payments&nbsp;&&nbsp;Fees
-          </div>
-          <p className="text-base leading-relaxed text-neutral-700">
-            All payments are governed by our Payment Policy. Mateira may modify
-            pricing or fee structures at any time. Platform fees are
-            non-refundable. Refunds, where applicable, follow the Refund Policy.
-          </p>
-
-          {/* 6 */}
-          <div className="text-base font-medium text-neutral-800">
-            6&nbsp;·&nbsp;Cancellations&nbsp;&&nbsp;Refunds
-          </div>
-          <p className="text-base leading-relaxed text-neutral-700">
-            Mateira does not allow cancellations once a session is confirmed.
-            Verify all details before payment. No-show and refund eligibility
-            are detailed in the Refund Policy.
-          </p>
-
-          {/* 7 */}
-          <div className="text-base font-medium text-neutral-800">
-            7&nbsp;·&nbsp;User&nbsp;Conduct
+            Eligibility and Representation
           </div>
           <ul className="list-disc space-y-2 pl-6 text-base leading-relaxed text-neutral-700">
-            <li>Provide accurate information—no misrepresentation.</li>
-            <li>Do not disrupt or interfere with the platform.</li>
-            <li>Avoid uploading harmful content (viruses, malware, etc.).</li>
-            <li>Respect intellectual-property and privacy rights of others.</li>
+            <li>
+              You represent to the Company that you are an entity who has the
+              capacity to contract in law and hold all the qualifications and
+              other prerequisites specified by the Company for enrollment as a
+              Provider on the Platform.
+            </li>
+            <li>
+              You unconditionally represent and warrant to the Company that you
+              have made available to the Company all the information, documents,
+              and other material regarding your qualification to provide the
+              Service, and no information has been withheld in this regard. You
+              also represent to the Company that all the information, documents,
+              and other material submitted by you to the Company for its
+              verification are accurate and complete.
+            </li>
+            <li>
+              You hereby represent and warrant to the Company that by providing
+              the Service and complying with the conditions hereunder will not
+              result in (i) a breach of or default under any contract to which
+              you are a party; or (ii) a violation of any applicable laws. For
+              Institutes, Companies, or any legally registered entities signing
+              up on the Platform, the individual signing up shall be deemed to
+              have the authority to represent and bind the concerned entity to
+              the terms hereof.
+            </li>
           </ul>
 
-          {/* 8 */}
+          {/* Independent Contractor Status */}
           <div className="text-base font-medium text-neutral-800">
-            8&nbsp;·&nbsp;Role-Based&nbsp;Access
+            Independent Contractor Status
           </div>
           <p className="text-base leading-relaxed text-neutral-700">
-            Users operate within teams/tenants, each with a role hierarchy.
-            Access permissions follow the role assigned in each team; users may
-            belong to multiple teams simultaneously.
+            You agree that you have registered on this Platform as an
+            independent freelancer or consultant, and nothing contained in the
+            Terms of Service or elsewhere shall give rise to an
+            employer-employee relationship between the Company and you.
           </p>
 
-          {/* 9 */}
+          {/* Service Performance */}
           <div className="text-base font-medium text-neutral-800">
-            9&nbsp;·&nbsp;Data&nbsp;Privacy&nbsp;&&nbsp;Security
+            Service Performance
           </div>
           <p className="text-base leading-relaxed text-neutral-700">
-            Your data is handled in accordance with our Privacy Policy. Mateira
-            employs industry-standard security measures to protect user
-            information.
+            You agree to perform the Services in a professional manner meeting
+            the expectation of the students in terms of quality. We may
+            regularly update qualifications and other eligibility conditions
+            with respect to the Services from time to time, and these shall be
+            strictly adhered to by you.
           </p>
 
-          {/* 10 */}
+          {/* Platform as an E-commerce Provider */}
           <div className="text-base font-medium text-neutral-800">
-            10&nbsp;·&nbsp;Modifications&nbsp;&&nbsp;Updates
+            Platform as an E-commerce Provider
           </div>
           <p className="text-base leading-relaxed text-neutral-700">
-            Mateira may alter these Terms at any time. Changes take effect upon
-            posting; continued use signifies acceptance of the revised Terms.
+            You agree and acknowledge that the Company is only an e-commerce
+            provider enabling students to interact with teachers and allowing
+            teachers to render their services through us. The Company shall not,
+            in any manner whatsoever, be held liable or responsible for any
+            matters in connection with the provision of the Service itself
+            conducted either online or face-to-face at a location decided by
+            mutual consent between the Provider and the Student. The Company
+            makes no representation or undertakes no responsibility with respect
+            to any Student or the requirements of any Student.
           </p>
 
-          {/* 11 */}
+          {/* Legal Binding */}
           <div className="text-base font-medium text-neutral-800">
-            11&nbsp;·&nbsp;Termination
+            Legal Binding
           </div>
           <p className="text-base leading-relaxed text-neutral-700">
-            Mateira may suspend or terminate your account or access at its
-            discretion, with or without notice, for behaviour that violates
-            these Terms or harms other users or Mateira.
+            You agree and understand that these terms and conditions are legally
+            binding and enforceable against you. Please do not use this Platform
+            if any of the terms set out herein are not acceptable to you. You
+            shall indemnify and hold harmless the Company from any and all
+            expenses that may be incurred by it as a result of your breach of
+            any of the obligations set out hereunder.
           </p>
 
-          {/* 12 */}
+          {/* No Guaranteed Enquiries or Payments */}
           <div className="text-base font-medium text-neutral-800">
-            12&nbsp;·&nbsp;Disclaimers&nbsp;&&nbsp;Limitation&nbsp;of&nbsp;Liability
+            No Guaranteed Enquiries or Payments
           </div>
           <p className="text-base leading-relaxed text-neutral-700">
-            Mateira services are provided “as is” without warranties. Mateira is
-            not liable for indirect, incidental or consequential damages arising
-            from platform use.
+            The Company does not underwrite a guaranteed number of enquiries or
+            demo bookings to Providers. The Company also does not guarantee any
+            number of student payments or conversions from the enquiries shared
+            with the registered Providers.
           </p>
 
-          {/* 13 */}
+          {/* Restrictions on Registration */}
           <div className="text-base font-medium text-neutral-800">
-            13&nbsp;·&nbsp;Governing&nbsp;Law
+            Restrictions on Registration
           </div>
           <p className="text-base leading-relaxed text-neutral-700">
-            These Terms are governed by Indian law. Disputes fall under the
-            exclusive jurisdiction of the courts in New&nbsp;Delhi, India.
+            The Company does not allow registration for home tuition agencies
+            and organizations that are engaged in providing products or services
+            similar to that of the Company or who are engaged in the collection
+            of data from the Website and sharing/utilizing it for the benefit of
+            competitors. If there are any such registrations, the Company
+            reserves the right to terminate those accounts without any prior
+            notice and without processing the refund of the paid subscription
+            fee, if any, associated with those accounts. The Company also
+            reserves the right to initiate any legal proceedings if any home
+            tuition agencies or organizations contravene conditions as stated
+            above.
           </p>
 
-          {/* 14 */}
+          {/* Non-Refundable Payments */}
           <div className="text-base font-medium text-neutral-800">
-            14&nbsp;·&nbsp;Contact&nbsp;Us
+            Non-Refundable Payments
           </div>
           <p className="text-base leading-relaxed text-neutral-700">
-            Questions or concerns? Email&nbsp;
-            <a
-              href="mailto:support@mateira.com"
-              className="text-primary-600 underline hover:text-primary-500"
-            >
-              support@mateira.com
-            </a>{" "}
-            or call&nbsp;+91&nbsp;98731&nbsp;89338.
+            You may clarify your doubts before you make a payment for any
+            Membership Plan or Services offered by the Company. Once a payment
+            is made, it cannot be refunded.
+          </p>
+
+          {/* Copyright Protection for Training Content */}
+          <div className="text-base font-medium text-neutral-800">
+            Copyright Protection for Training Content
+          </div>
+          <ul className="list-disc space-y-2 pl-6 text-base leading-relaxed text-neutral-700">
+            <li>
+              The Company will not use any Training Content uploaded by you on
+              the Platform for any commercial purpose or otherwise without
+              seeking explicit permission from you as and when required.
+            </li>
+            <li>
+              The Company can use the content for marketing their services or
+              the services of the Providers.
+            </li>
+            <li>
+              The Company may request you to upload your training content on the
+              Platform for the sole reason of making your experience of
+              conducting tuition classes online on the Platform more seamless
+              and hassle-free.
+            </li>
+            <li>
+              By uploading any content on the Platform, you also warrant that
+              you own the copyright for that content. Any plagiarized content,
+              once noticed by our Audit Team or Users, will be liable to be
+              removed from the Platform with or without any notice to you. For
+              any liabilities arising out of your usage of plagiarized content,
+              you shall be solely responsible and liable for the claims arising
+              out of such legal proceedings.
+            </li>
+          </ul>
+
+          {/* PAYMENT TERMS */}
+          <div className="text-lg font-semibold text-neutral-900">
+            PAYMENT TERMS
+          </div>
+
+          {/* Fees and Deductions */}
+          <div className="text-base font-medium text-neutral-800">
+            Fees and Deductions
+          </div>
+          <ul className="list-disc space-y-2 pl-6 text-base leading-relaxed text-neutral-700">
+            <li>
+              You agree to pay to the Company any fees determined by the Company
+              at the time of signing up for the Services.
+            </li>
+            <li>
+              The Company will deduct TCS/TDS based on laws and policies laid
+              out in the GST TDS policy.
+            </li>
+            <li>
+              The Company will settle all money in your account at T+1 after
+              deducting all necessary deductions.
+            </li>
+          </ul>
+
+          {/* Acceptance */}
+          <div className="text-base font-medium text-neutral-800">
+            Acceptance
+          </div>
+          <p className="text-base leading-relaxed text-neutral-700">
+            By using MATeira&apos;s platform Eira.club – you accept all terms
+            and conditions. Please stop using the platform if you do not agree
+            to any of the terms mentioned above.
+          </p>
+
+          {/* Student <> Platform Section */}
+          <div className="text-4xl font-semibold text-neutral-900 text-center mb-8">
+            Student &lt;&gt; Platform
+          </div>
+
+          {/* Terms Applicable to Students */}
+          <div className="text-lg font-semibold text-neutral-900">
+            Terms Applicable to Students Engaging with Any Teacher Partner
+          </div>
+          <ul className="list-disc space-y-2 pl-6 text-base leading-relaxed text-neutral-700">
+            <li>
+              This agreement between you (&quot;Student&quot; or
+              &quot;you&quot;) and Mateira Technologies Private Limited
+              (&quot;Company&quot; or &quot;we&quot;) may be terminated or
+              modified by the Company at any time. If you do not agree to any
+              new or modified terms and conditions, you may choose to leave the
+              Platform.
+            </li>
+            <li>
+              You agree and acknowledge that the Company is only an aggregator
+              of service providers. The Company owns and operates a platform
+              (&quot;Platform&quot;) for Teacher Partners
+              (&quot;Providers&quot;) to connect with prospective students
+              and/or their parents or guardians (User&apos;s). The Company shall
+              not, in any manner whatsoever, be held liable or responsible for
+              any matters in connection with the provision of the Service itself
+              at the premises of the concerned student or during an online
+              session (as the case may be).
+            </li>
+            <li>
+              While the Company follows a screening process to ensure that the
+              Providers are qualified to provide the Service, the Company makes
+              no representation or undertakes no responsibility with respect to
+              the proficiency, qualification, skills, or conduct of any Teacher
+              Partner. You may use the Service at your own risk and
+              responsibility after interacting with the Teacher Partners and
+              conducting your own due diligence.
+            </li>
+            <li>
+              You agree and acknowledge that the Company has no control over the
+              fee charged by a particular Provider for the services provided, or
+              any change in such fee.
+            </li>
+            <li>
+              You agree and understand that these terms and conditions are
+              legally binding and enforceable against you. Please do not use
+              this Platform if any of the terms set out herein are not
+              acceptable to you. You shall indemnify and hold harmless the
+              Company from any and all expenses that may be incurred by it as a
+              result of your breach of any of the obligations set out hereunder.
+            </li>
+            <li>
+              The Company charges a platform fee for payment processing only on
+              certain payment modes.
+            </li>
+          </ul>
+
+          {/* Company Name */}
+          <div className="text-base font-medium text-neutral-800">
+            Company Name
+          </div>
+          <p className="text-base leading-relaxed text-neutral-700">
+            Mateira Technologies Private Limited
           </p>
         </section>
       </div>
