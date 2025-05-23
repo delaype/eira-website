@@ -4,6 +4,7 @@ import HeroSection from "../components/layout/HeroSection";
 import PromotionSection from "../components/layout/PromotionSection";
 import FeaturesSection from "~/components/layout/FeaturesSection";
 import TutorialSection from "~/components/layout/TutorialSection";
+import TutorSection from "~/components/layout/TutorSection";
 import SecuritySection from "~/components/layout/SecuritySection";
 import TestimonialsSection from "~/components/layout/TestimonialsSection";
 import PromotionalBox from "~/components/layout/PromotionalBox";
@@ -46,6 +47,7 @@ export default function Home() {
       <PromotionSection isStudent={isStudent} />
       <FeaturesSection />
       <TutorialSection />
+      <TutorSection />
       <SecuritySection />
       <TestimonialsSection />
       <PromotionalBox isStudent={isStudent} />

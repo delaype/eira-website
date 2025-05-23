@@ -1,17 +1,19 @@
 import React from "react";
 
 interface TypographyHeadingProps {
-  text1?: string;
-  text2?: string;
+  text1: string;
+  text2: string;
+  className?: string;
 }
 
 export const TypographyHeading: React.FC<TypographyHeadingProps> = ({
   text1,
   text2,
+  className = "",
 }) => {
   return (
     <div
-      className="
+      className={`
     flex flex-col           /* make the container a flex box          */
     justify-start           /* default → left-align on mobile         */
     sm:justify-center       /* ≥ 640 px  → restore centered alignment */
@@ -20,7 +22,8 @@ export const TypographyHeading: React.FC<TypographyHeadingProps> = ({
     sm:w-full               /* ≥ 640 px: full width                   */
     mx-0                    /* no horizontal auto-margin on phones    */
     sm:mx-auto              /* center horizontally again on desktop   */
-  "
+    ${className}
+  `}
     >
       {/* hero / headline */}
       {text1 && (

@@ -83,6 +83,45 @@ const config: Config = {
         24: "6rem" /* 96px */,
         32: "8rem" /* 128px */,
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { 
+            opacity: '0',
+            visibility: 'hidden'
+          },
+          '100%': { 
+            opacity: '1',
+            visibility: 'visible'
+          },
+        },
+        fadeInUp: {
+          '0%': { 
+            opacity: '0',
+            visibility: 'hidden',
+            transform: 'translateY(10px)'
+          },
+          '100%': { 
+            opacity: '1',
+            visibility: 'visible',
+            transform: 'translateY(0)'
+          },
+        },
+        fadeInBubble: {
+          '0%': { 
+            opacity: '0',
+            visibility: 'hidden'
+          },
+          '100%': { 
+            opacity: '1',
+            visibility: 'visible'
+          },
+        }
+      },
+      animation: {
+        fadeIn: 'fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+        fadeInUp: 'fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+        fadeInBubble: 'fadeInBubble 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards',
+      },
     },
   },
   plugins: [],
