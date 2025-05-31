@@ -3,7 +3,17 @@ import { TypographyTypeI } from "../typography/TypographyTypeI";
 interface PromotionalBoxProps {
   isStudent: boolean;
 }
+const STUDENT_COPY = {
+  text2: "Save money on tuition fees",
+  text5:
+    "Join the Eira.club community today—where learning happens at lowest fees, and you can pay fees through multiple payment modes.",
+};
 
+const TUTOR_COPY = {
+  text2: "Ready for a Smarter Way to teach online and get paid?",
+  text5:
+    "Join the Eira.club community today—where teaching happens hassle-free, and you get paid instantly.",
+};
 export default function PromotionalBox({ isStudent }: PromotionalBoxProps) {
   return (
     <section className="py-16">
@@ -12,8 +22,8 @@ export default function PromotionalBox({ isStudent }: PromotionalBoxProps) {
         <div className="space-y-10">
           <TypographyTypeI
             text1="Join Us"
-            text2="Ready for a Smarter Way to Manage Your Payments?"
-            text5="Join the Eira.club community today—where education fees are paid easily, and payments are received instantly."
+            text2={isStudent ? STUDENT_COPY.text2 : TUTOR_COPY.text2}
+            text5={isStudent ? STUDENT_COPY.text5 : TUTOR_COPY.text5}
           />
 
           <a

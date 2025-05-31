@@ -44,9 +44,9 @@ export default function Home() {
         onToggleChange={handleToggleChange}
       />
       <HeroSection isStudent={isStudent} />
-      <PromotionSection isStudent={isStudent} />
+      <TutorialSection isStudent={isStudent} />
       <FeaturesSection />
-      <TutorialSection />
+      <PromotionSection isStudent={isStudent} />
       <TutorSection />
       <SecuritySection />
       <TestimonialsSection />

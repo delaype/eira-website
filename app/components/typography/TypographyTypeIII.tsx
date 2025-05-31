@@ -3,11 +3,13 @@ import React from "react";
 interface TypographyTypeIIIProps {
   text1?: string;
   text2?: string;
+  text3?: string;
 }
 
 export const TypographyTypeIII: React.FC<TypographyTypeIIIProps> = ({
   text1,
   text2,
+  text3,
 }) => {
   return (
     <div className="space-y-2">
@@ -20,6 +22,7 @@ export const TypographyTypeIII: React.FC<TypographyTypeIIIProps> = ({
       {text2 && (
         <p className="text-[14px] sm:text-xs text-black-40 m-2">{text2}</p>
       )}
+      {text3 && <p className="sm:text-[14px] text-black-40 m-2">{text3}</p>}
     </div>
   );
 };

@@ -25,40 +25,40 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
-    window.addEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
 
     // Mouse move handler
     const handleMouseMove = (e: MouseEvent) => {
       if (!isMobile) {
         setMousePosition({
           x: (e.clientX - window.innerWidth / 2) / 50,
-          y: (e.clientY - window.innerHeight / 2) / 50
+          y: (e.clientY - window.innerHeight / 2) / 50,
         });
       }
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("resize", checkMobile);
     };
   }, [isMobile]);
 
   // Define constants for copy text based on user type
   const STUDENT_COPY = {
-    heading: "Pay Fees Easily with Credit Card!",
+    heading: "Pay for your classes with Credit Card!",
     subheading:
-      "Lowest fee for students. Zero-cost payments for tutors. Fast, secure, and RBI-regulated.",
+      "Have a Credit Card? Pay via Credit Card for your sessions at just 1% cost.",
   };
 
   const TUTOR_COPY = {
-    heading: "Accept Payments at 0 cost",
+    heading: "Get Paid for your classes via Credit Card!",
     subheading:
-      "Receive payments via Credit Card, EMI, and UPI at zero cost to you – Get paid directly to your bank account, hassle-free!",
+      "Eira lets your students pay you for your classes via Credit Card. You get paid instantly in your bank account and you pay no fees.",
   };
 
   return (
@@ -67,7 +67,7 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
       style={{ height: "clamp(400px, 80vh, 600px)" }}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 items-center pt-16 gap-12 md:gap-0 pb-16 md:pb-0">
-        <div className="order-2 md:order-1 flex flex-col w-full md:w-4/6">
+        <div className="order-2 md:order-1 flex flex-col w-full md:w-5/6">
           <TypographyHeading
             text1={isStudent ? STUDENT_COPY.heading : TUTOR_COPY.heading}
             text2={isStudent ? STUDENT_COPY.subheading : TUTOR_COPY.subheading}
@@ -77,7 +77,9 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
             href="https://play.google.com/store/apps/details?id=com.anonymous.eiraapp&pli=1"
             target="_blank"
             rel="noopener noreferrer"
-            className={`hover:cursor-pointer ${isLoaded ? "animate-fadeIn" : "opacity-0"}`}
+            className={`hover:cursor-pointer ${
+              isLoaded ? "animate-fadeIn" : "opacity-0"
+            }`}
           >
             <img
               src="assets/play-store.svg"
@@ -90,7 +92,7 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
             />
           </a>
         </div>
-        
+
         <div className="order-1 md:order-2 relative">
           <img
             src={isStudent ? "assets/student.svg" : "assets/tutor.svg"}
@@ -109,33 +111,45 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
                 src="assets/student-bubble-1.svg"
                 alt="eira student"
                 style={{
-                  transform: !isMobile ? `translate(${mousePosition.x * 1.5}px, ${mousePosition.y * 1.5}px)` : 'none',
-                  visibility: showBubbles ? 'visible' : 'hidden',
-                  opacity: showBubbles ? 1 : 0
+                  transform: !isMobile
+                    ? `translate(${mousePosition.x * 1.5}px, ${
+                        mousePosition.y * 1.5
+                      }px)`
+                    : "none",
+                  visibility: showBubbles ? "visible" : "hidden",
+                  opacity: showBubbles ? 1 : 0,
                 }}
                 className="max-w-full absolute top-44 -left-10 sm:-left-20 w-[clamp(120px,55%,450px)] transition-transform duration-200 ease-out animate-fadeInBubble"
               />
 
-              <img
+              {/* <img
                 src="assets/student-bubble-2.svg"
                 alt="eira student"
-                style={{ 
+                style={{
                   width: "clamp(120px, 60%, 450px)",
-                  transform: !isMobile ? `translate(${mousePosition.x * -1}px, ${mousePosition.y * -1}px)` : 'none',
-                  visibility: showBubbles ? 'visible' : 'hidden',
-                  opacity: showBubbles ? 1 : 0
+                  transform: !isMobile
+                    ? `translate(${mousePosition.x * -1}px, ${
+                        mousePosition.y * -1
+                      }px)`
+                    : "none",
+                  visibility: showBubbles ? "visible" : "hidden",
+                  opacity: showBubbles ? 1 : 0,
                 }}
                 className="max-w-full absolute bottom-0 right-0 transition-transform duration-200 ease-out animate-fadeInBubble"
-              />
+              /> */}
 
               <img
                 src="assets/student-bubble-3.svg"
                 alt="eira student"
-                style={{ 
+                style={{
                   width: "clamp(120px, 60%, 450px)",
-                  transform: !isMobile ? `translate(${mousePosition.x * 2}px, ${mousePosition.y * 2}px)` : 'none',
-                  visibility: showBubbles ? 'visible' : 'hidden',
-                  opacity: showBubbles ? 1 : 0
+                  transform: !isMobile
+                    ? `translate(${mousePosition.x * 2}px, ${
+                        mousePosition.y * 2
+                      }px)`
+                    : "none",
+                  visibility: showBubbles ? "visible" : "hidden",
+                  opacity: showBubbles ? 1 : 0,
                 }}
                 className="max-w-full absolute top-7 -right-4 transition-transform duration-200 ease-out animate-fadeInBubble"
               />
@@ -146,20 +160,28 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
                 src="assets/tutor-bubble-1.svg"
                 alt="eira tutor"
                 style={{
-                  transform: !isMobile ? `translate(${mousePosition.x * 1.5}px, ${mousePosition.y * 1.5}px)` : 'none',
-                  visibility: showBubbles ? 'visible' : 'hidden',
-                  opacity: showBubbles ? 1 : 0
+                  transform: !isMobile
+                    ? `translate(${mousePosition.x * 1.5}px, ${
+                        mousePosition.y * 1.5
+                      }px)`
+                    : "none",
+                  visibility: showBubbles ? "visible" : "hidden",
+                  opacity: showBubbles ? 1 : 0,
                 }}
                 className="max-w-full absolute top-44 -left-10 sm:-left-20 w-[clamp(120px,55%,450px)] transition-transform duration-200 ease-out animate-fadeInBubble"
               />
               <img
                 src="assets/tutor-bubble-2.svg"
                 alt="eira tutor"
-                style={{ 
+                style={{
                   width: "clamp(120px, 60%, 450px)",
-                  transform: !isMobile ? `translate(${mousePosition.x * -1}px, ${mousePosition.y * -1}px)` : 'none',
-                  visibility: showBubbles ? 'visible' : 'hidden',
-                  opacity: showBubbles ? 1 : 0
+                  transform: !isMobile
+                    ? `translate(${mousePosition.x * -1}px, ${
+                        mousePosition.y * -1
+                      }px)`
+                    : "none",
+                  visibility: showBubbles ? "visible" : "hidden",
+                  opacity: showBubbles ? 1 : 0,
                 }}
                 className="max-w-full absolute bottom-0 right-0 transition-transform duration-200 ease-out animate-fadeInBubble"
               />
@@ -167,11 +189,15 @@ export default function HeroSection({ isStudent }: HeroSectionProps) {
               <img
                 src="assets/tutor-bubble-3.svg"
                 alt="eira tutor"
-                style={{ 
+                style={{
                   width: "clamp(115px, 50%, 425px)",
-                  transform: !isMobile ? `translate(${mousePosition.x * 2}px, ${mousePosition.y * 2}px)` : 'none',
-                  visibility: showBubbles ? 'visible' : 'hidden',
-                  opacity: showBubbles ? 1 : 0
+                  transform: !isMobile
+                    ? `translate(${mousePosition.x * 2}px, ${
+                        mousePosition.y * 2
+                      }px)`
+                    : "none",
+                  visibility: showBubbles ? "visible" : "hidden",
+                  opacity: showBubbles ? 1 : 0,
                 }}
                 className="max-w-full absolute top-7 -right-4 transition-transform duration-200 ease-out animate-fadeInBubble"
               />

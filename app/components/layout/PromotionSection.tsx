@@ -10,20 +10,20 @@ export default function PromotionSection({ isStudent }: PromotionSectionProps) {
       className="
     grid grid-cols-1 md:grid-cols-3      /* ⇢ 1-col stack on mobile, 3-col on ≥ md */
     gap-y-12 md:gap-x-2                  /* vertical breathing room on mobile     */
-    py-24 mt-10
+    py-24 
   "
     >
       {/* ───────────────────  1) Heading / intro copy  ─────────────────── */}
       <div className="md:col-start-1 md:row-start-1">
         {isStudent ? (
           <TypographyTypeII
-            text1="Choose from multiple payment modes"
-            text2="Pay your education fees directly from your credit card at just 1% fee—saving money with every transaction."
+            text1="Multiple Payment Modes"
+            text2="Pay your tuition fees through Credit Card at just 1% fee—saving money with every transaction, so you can focus on learning."
           />
         ) : (
           <TypographyTypeII
             text1="Multiple Payment Modes"
-            text2="Offer your students through popular modes of payments, including EMI and UPI"
+            text2="Easily accept your fees through Credit Card, EMI, and UPI"
           />
         )}
       </div>
@@ -66,7 +66,7 @@ export default function PromotionSection({ isStudent }: PromotionSectionProps) {
         ) : (
           <TypographyTypeII
             text1="Instant Settlement"
-            text2="Receive your payments directly in your bank account at 0% cost."
+            text2="We enable instant settlements of your fees in your bank account at 0% cost."
           />
         )}
       </div>

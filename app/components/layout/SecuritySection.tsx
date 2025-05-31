@@ -23,7 +23,7 @@ export default function SecuritySection() {
             <TypographyTypeI
               text1="Built to be secure"
               text2="Your Security is Our Priority"
-              text5="With partnerships with top banks and RBI-regulated payment aggregators, every transaction is safeguarded. Enjoy peace of mind knowing your financial information is fully protected."
+              text5="At Eira, we take your security seriously. With partnerships with top banks and RBI-regulated payment aggregators, every transaction is safeguarded. Enjoy peace of mind knowing your financial information is fully protected."
             />
 
             <p className="text-gray-600 font-medium text-[14px] sm:text-sm">

@@ -1,20 +1,15 @@
 import { TypographyTypeIII } from "../typography/TypographyTypeIII";
 
 export default function FeaturesSection() {
+  const imageBoxStyles =
+    "w-full h-[clamp(120px,15vw,260px)] sm:h-65 overflow-hidden mb-5";
   return (
     <section className="py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Card 1 */}
         <article className="bg-white rounded-2xl overflow-hidden  flex flex-col">
           {/* image box */}
-          <div
-            className="
-    w-full
-    h-[clamp(180px,65vw,260px)]  /* phones: shorter; width unchanged      */
-    sm:h-65                      /* ≥ 640 px: keep the original height    */
-    overflow-hidden mb-5
-  "
-          >
+          <div className={imageBoxStyles}>
             <img
               src="assets/feature-1.svg"
               alt="Verification Successful"
@@ -25,20 +20,13 @@ export default function FeaturesSection() {
           {/* text */}
           <TypographyTypeIII
             text1="Instant Onboarding"
-            text2="Sign up and Verify Aadhar in 2 steps, and start receiving payments from your students. Enjoy instant settlement of funds post verification at 0 cost."
+            text3="You can get started in just 2 steps. Sign up and verify your Aadhar card, and start using Eira."
           />
         </article>
 
         {/* Card 2 */}
         <article className="bg-white rounded-2xl overflow-hidden  flex flex-col">
-          <div
-            className="
-    w-full
-    h-[clamp(180px,60vw,260px)]  /* phones: shorter; width unchanged      */
-    sm:h-65                      /* ≥ 640 px: keep the original height    */
-    overflow-hidden mb-5
-  "
-          >
+          <div className={imageBoxStyles}>
             <img
               src="assets/feature-2.svg"
               alt="Create and Share Payment Links"
@@ -48,20 +36,13 @@ export default function FeaturesSection() {
 
           <TypographyTypeIII
             text1="Create and Share Payment Links"
-            text2="Create a payment link and share it with your students. They can pay you directly through the link."
+            text3="We make it easy to receive tuition fees from your students. Just share the link after the class, and they can pay you directly through the link."
           />
         </article>
 
         {/* Card 3 */}
         <article className="bg-white rounded-2xl overflow-hidden flex flex-col">
-          <div
-            className="
-    w-full
-    h-[clamp(180px,60vw,260px)]  /* phones: shorter; width unchanged      */
-    sm:h-65                      /* ≥ 640 px: keep the original height    */
-    overflow-hidden mb-5
-  "
-          >
+          <div className={imageBoxStyles}>
             <img
               src="assets/feature-3.svg"
               alt="Track Payments"
@@ -70,8 +51,22 @@ export default function FeaturesSection() {
           </div>
 
           <TypographyTypeIII
-            text1="Track Payments"
-            text2="Keep a clear record of all transactions. Both students and tutors can easily track payments, ensuring transparency and financial control."
+            text1="Track Everything"
+            text3="Track your classes, payments, and everything in between, all in one place."
+          />
+        </article>
+        <article className="bg-white rounded-2xl overflow-hidden flex flex-col">
+          <div className={imageBoxStyles}>
+            <img
+              src="assets/feature-4.png"
+              alt="Search Tutors"
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+
+          <TypographyTypeIII
+            text1="Search Tutors"
+            text3="Easily schedule classes with any kyc verified tutor from Eira's network."
           />
         </article>
       </div>

@@ -8,7 +8,7 @@ export default function TestimonialsSection() {
         <TypographyTypeI
           text1="Testimonials"
           text2="Stories from Our Happy Users"
-          text4="We serve over 10,000 customers across different platforms"
+          text4="Eira has over 10,000 happy customers. Students and Tutors alike love the ease of use and the low fees on Eira."
         />
       </div>
 
