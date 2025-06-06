@@ -60,7 +60,7 @@ export default function PromotionSection({ isStudent }: PromotionSectionProps) {
       <div className="md:col-start-3 md:row-start-3 md:place-self-end md:text-right">
         {isStudent ? (
           <TypographyTypeII
-            text1="Credit card to bank account at 1%"
+            text1="Pay education fees through credit card at 1% platform fees"
             text2="Receive payments directly in your bank account at 0% cost with instant settlements and robust security."
           />
         ) : (
