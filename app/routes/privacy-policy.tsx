@@ -263,7 +263,7 @@ export default function PrivacyPolicy() {
               <span className="font-medium">Contact Information&nbsp;—</span>
               &nbsp;For any questions, concerns, or disputes related to the
               refund policy, please contact our support team at
-              support@mateira.com or call us at 8069578088. Our support hours
+              support@eira.club or call us at 8069578088. Our support hours
               are Monday to Friday, 10 AM to 6 PM IST.
             </li>
           </ol>
@@ -447,7 +447,7 @@ export default function PrivacyPolicy() {
           </div>
           <p className="text-base leading-relaxed text-neutral-700">
             For any grievances or complaints regarding this policy, please
-            contact our support team at anjum@delpe.in or call us at 8069578088.
+            contact our support team at support@eira.club or call us at 8069578088.
           </p>
 
           <div className="text-base font-medium text-neutral-800">
