@@ -53,10 +53,10 @@ export default function FooterSection() {
               <p className="text-neutral-300 text-[12px]">
                 Phone:{" "}
                 <a
-                  href="tel:+918069578088"
+                  href="tel:+918069578280"
                   className="hover:text-blue-600 transition"
                 >
-                  +91 8069578088
+                  +91 8069578280
                 </a>
               </p>
               <p className="text-neutral-300 text-[12px]">
