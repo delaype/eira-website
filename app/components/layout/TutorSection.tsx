@@ -1,66 +1,136 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
 
 interface Tutor {
-  id: number;
+  id: string;
   name: string;
-  photo: string;
-  introduction: string;
   rating: number;
   subjects: string[];
-  hourlyRate: number;
-  bookSessionLink: string;
+  websiteLink: string;
 }
 
-const tutors: Tutor[] = [
+const tutorList: Tutor[] = [
   {
-    id: 1,
-    name: "Ajay Seth",
-    photo: "/assets/Ajay-Bihari-Seth.jpg",
-    introduction:
-      "IIT Delhi graduate with 20+ years of experience in teaching Mathematics for IIT-JEE and NEET. Specializes in Calculus, Algebra, and Trigonometry. Successfully mentored 500+ students to clear competitive exams.",
+    id: "be5590e0-3056-4e48-833f-18d78f3e43aa",
+    name: "Madhu Sudhan Mundrathi",
+    websiteLink: "https://app.eira.club/mundrathi-zfqcq",
     rating: 4.9,
-    subjects: ["IIT-JEE Mathematics", "NEET Physics", "CBSE Advanced"],
-    hourlyRate: 0,
-    bookSessionLink: "https://app.eira.club/ajay-tqvr6",
+    subjects: ["IIT-JEE Mathematics", "NEET Physics", "CBSE Advanced"]
   },
   {
-    id: 2,
-    name: "Kanchan Vyas",
-    photo: "/assets/Kanchan-Vyas.png",
-    introduction:
-      "Dynamic Computer Science educator with 5+ years of experience in teaching programming and software development. Specializes in modern web technologies, Data Structures, and Algorithms. Successfully guided 200+ students in their tech careers and competitive programming.",
+    id: "f5e38848-1865-4840-992c-09ab7a29f992",
+    name: "Tajinder Kaur",
+    websiteLink: "https://app.eira.club/tajinder-aguf3",
+    rating: 4.7,
+    subjects: ["IIT-JEE Mathematics", "IIT-JEE Chemistry", "NEET Physics"]
+  },
+  {
+    id: "7c2a10a4-6a72-47a9-b869-9a4226a3cd12",
+    name: "Harbhajan Kaur",
+    websiteLink: "https://app.eira.club/harbhajan-l4qlp",
     rating: 4.8,
-    subjects: ["Web Development", "DSA", "Placement Preparation"],
-    hourlyRate: 0,
-    bookSessionLink: "https://app.eira.club/ajay-tqvr6",
+    subjects: ["Web Development", "DSA", "Placement Preparation"]
   },
   {
-    id: 3,
-    name: "Sunidhi Katiyar",
-    photo: "/assets/Sunidhi-Katiyar.jpg",
-    introduction:
-      "Experienced English and Communication Skills trainer. Specializes in IELTS, TOEFL, and English for competitive exams. Helps students excel in verbal ability and communication skills.",
-    rating: 4.9,
-    subjects: ["IELTS", "TOEFL", "Verbal Ability"],
-    hourlyRate: 0,
-    bookSessionLink: "https://app.eira.club/ajay-tqvr6",
+    id: "55b08b1d-601d-4e58-8bb3-f3c3cea0097e",
+    name: "Guddu Kumar",
+    websiteLink: "https://app.eira.club/guddu-nvgtg",
+    rating: 4.6,
+    subjects: ["IIT-JEE Physics", "NEET Physics", "CBSE Advanced"]
   },
-];
+  {
+    id: "8948d566-0846-4df3-9d2b-7a200cd446fc",
+    name: "Thamarai Selvan Sekar",
+    websiteLink: "https://app.eira.club/thamarai-l59uv",
+    rating: 4.9,
+    subjects: ["IELTS", "TOEFL", "Verbal Ability"]
+  },
+  {
+    id: "f65670c6-8828-4d40-a2df-14220bd973be",
+    name: "Gursewak Singh",
+    websiteLink: "https://app.eira.club/gursewak-cle5s",
+    rating: 4.5,
+    subjects: ["Python Programming", "Machine Learning", "Data Structures"]
+  },
+  {
+    id: "f59f44a4-68f8-4c45-bbdf-3cb1e20ac737",
+    name: "Urvashi Thakur",
+    websiteLink: "https://app.eira.club/urvashi-mg0mg",
+    rating: 4.8,
+    subjects: ["Computer Science", "Algorithms", "DSA"]
+  },
+  {
+    id: "1b260a26-29bc-42a3-a042-d7f55073d93f",
+    name: "Ansari Zeeshan Mahtab Alam",
+    websiteLink: "https://app.eira.club/ansari-vrl6y",
+    rating: 4.7,
+    subjects: ["IIT-JEE Mathematics", "CBSE Advanced", "IIT-JEE Physics"]
+  },
+  {
+    id: "086dba36-47d3-4149-8345-2a0f74904a29",
+    name: "Gudisa Sudharshan Reddy",
+    websiteLink: "https://app.eira.club/gudisa-ufrtr",
+    rating: 4.9,
+    subjects: ["Node.js", "Web Development", "React Development"]
+  },
+  {
+    id: "5042559d-430c-4907-9295-b24f0d46fe4c",
+    name: "Shalini Saxena",
+    websiteLink: "https://app.eira.club/shalini-2ltfo",
+    rating: 4.6,
+    subjects: ["NEET Biology", "CBSE Advanced", "IIT-JEE Chemistry"]
+  },
+  {
+    id: "6b6f4c48-b669-4a13-8ba7-d20518838909",
+    name: "Ajay Seth",
+    websiteLink: "https://app.eira.club/ajay-tqvr6",
+    rating: 4.9,
+    subjects: ["IIT-JEE Mathematics", "IIT-JEE Physics", "IIT-JEE Chemistry"]
+  },
+  {
+    id: "1b30b2a7-e165-4204-831e-e6d174964edc",
+    name: "Kanchan Vyas",
+    websiteLink: "https://app.eira.club/kanchan-y0jgw",
+    rating: 4.8,
+    subjects: ["Placement Preparation", "Algorithms", "DSA"]
+  }
+]
 
 export default function TutorSection() {
+  const [itemsPerPage, setItemsPerPage] = useState(3);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        // Mobile: 1 item per page
+        setItemsPerPage(1);
+      } else if (window.innerWidth < 1024) {
+        // Tablet: 2 items per page
+        setItemsPerPage(2);
+      } else {
+        // Desktop: 3 items per page
+        setItemsPerPage(3);
+      }
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const totalPages = Math.ceil(tutorList.length / itemsPerPage);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === tutors.length - 1 ? 0 : prevIndex + 1
+      prevIndex === totalPages - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? tutors.length - 1 : prevIndex - 1
+      prevIndex === 0 ? totalPages - 1 : prevIndex - 1
     );
   };
 
@@ -82,59 +152,70 @@ export default function TutorSection() {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {tutors.map((tutor) => (
-                <div key={tutor.id} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="md:flex">
-                      <div className="md:flex-shrink-0">
-                        <img
-                          className="h-48 w-full object-cover md:w-48"
-                          src={tutor.photo}
-                          alt={tutor.name}
-                        />
-                      </div>
-                      <div className="p-8">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-xl font-semibold text-gray-900">
-                            {tutor.name}
-                          </h3>
-                          <div className="flex items-center">
-                            <StarIcon className="h-5 w-5 text-yellow-400" />
-                            <span className="ml-1 text-gray-600">
-                              {tutor.rating}
-                            </span>
+              {Array.from({ length: totalPages }).map((_, pageIndex) => {
+                const start = pageIndex * itemsPerPage;
+                const pageTutors = tutorList.slice(
+                  start,
+                  start + itemsPerPage
+                );
+
+                return (
+                  <div
+                    key={pageIndex}
+                    className="w-full flex-shrink-0 flex"
+                  >
+                    {pageTutors.map((tutor) => (
+                      <div
+                        key={tutor.id}
+                        className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2 sm:px-4"
+                      >
+                        <div className="h-full bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-6 flex flex-col">
+                          <div className="flex justify-center mb-4">
+                          <img 
+                            src={`https://api.dicebear.com/7.x/notionists/svg?seed=${encodeURIComponent(tutor.name)}`} 
+                            alt={tutor.name}
+                            className="w-16 h-16 sm:w-20 sm:h-20 rounded-full"
+                          />
                           </div>
-                        </div>
-                        <p className="mt-2 text-gray-600">
-                          {tutor.introduction}
-                        </p>
-                        <div className="mt-4">
-                          <div className="flex flex-wrap gap-2">
-                            {tutor.subjects.map((subject) => (
-                              <span
-                                key={subject}
-                                className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800"
-                              >
-                                {subject}
+                          <div className="flex items-center justify-between gap-2">
+                            <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 truncate">
+                              {tutor.name}
+                            </h3>
+                            <div className="flex items-center flex-shrink-0">
+                              <StarIcon className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400" />
+                              <span className="ml-1 text-sm sm:text-base text-gray-600">
+                                {tutor.rating}
                               </span>
-                            ))}
+                            </div>
+                          </div>
+                          <div className="mt-4">
+                            <div className="flex flex-col gap-2">
+                              {tutor.subjects.map((subject) => (
+                                <div
+                                  key={subject}
+                                  className="w-fit items-center px-3 py-1 rounded-full text-xs font-normal bg-blue-100 text-blue-800"
+                                >
+                                  {subject}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="mt-auto pt-4 sm:pt-5 flex justify-center">
+                            <button
+                              onClick={() =>
+                                window.open(tutor.websiteLink, "_blank")
+                              }
+                              className="bg-primary-600 text-white px-4 sm:px-6 py-2 text-xs sm:text-xs rounded-full hover:bg-primary-700 transition-colors w-auto sm:w-auto"
+                            >
+                              Book Session
+                            </button>
                           </div>
                         </div>
-                        <div className="mt-6 flex justify-end">
-                          <button
-                            onClick={() =>
-                              window.open(tutor.bookSessionLink, "_blank")
-                            }
-                            className="bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition-colors"
-                          >
-                            Book Session
-                          </button>
-                        </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
@@ -153,7 +234,7 @@ export default function TutorSection() {
         </div>
 
         <div className="flex justify-center mt-8 space-x-2">
-          {tutors.map((_, index) => (
+          {Array.from({ length: totalPages }).map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
